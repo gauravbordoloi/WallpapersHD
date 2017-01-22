@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/activity_splash"
+    android:background="@color/black">
+    <TextView
+        android:id="@+id/tvWallpapersHD"
+        android:text="Wallpapers HD"
+        android:textSize="40sp"
+        android:layout_above="@+id/tvULTIMATE"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:id="@+id/tvULTIMATE"
+        android:text="ULTIMATE"
+        android:textSize="40sp"
+        android:paddingTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:id="@+id/tvGMONETIX"
+        android:text="Gmonetix"
+        android:textSize="30sp"
+        android:padding="15dp"
+        android:gravity="end|bottom"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</RelativeLayout>

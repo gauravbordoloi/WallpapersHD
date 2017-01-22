@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Wallpapers HD : Ultimate</string>
+
+    <string name="title_activity_welcome">الرئيسية</string>
+    <string name="next">التالي</string>
+    <string name="skip">تخطي</string>
+    <string name="start">إبدأ</string>
+
+    <string name="slide_1_title">خلفيات و صور يومية</string>
+    <string name="slide_1_desc">صباح كل يوم مع صور جديد</string>
+
+    <string name="slide_2_title">تصميم ماتيريل</string>
+    <string name="slide_2_desc">تصميم ماتيريا كامل لتدخل اسرع و اجمل</string>
+
+    <string name="slide_3_title">فئات صور مختلفة</string>
+    <string name="slide_3_desc"> كل الخلفيات و الصور بجودة عالية جدا HD</string>
+
+    <string name="slide_4_title">مشاركة،تحميل،والمزيد</string>
+    <string name="slide_4_desc">شارك،حمل و ضع الصور ك كخلفية</string>
+
+    <string name="play_again_desc">لاعادة رؤية ال مقدمة اذهب الى ضبط برامج و امسح بيانات تطبيقنا  </string>
+    <string name="play_again">اعادة مرة اخرى</string>
+
+
+    <string name="action_settings">الضبط</string>
+    <string name="action_camera">كاميرا</string>
+
+    <string name="toast_saved">الصور محفوظة في #</string>
+
+    <string name="toast_wallpaper_set">تم تعيين الخلفية!</string>
+    <string name="toast_wallpaper_set_failed">عذرا لم يتم تعين الخلفية</string>
+    <string name="toast_saved_failed">آسف! فشل في حفظ ورق الجدران</string>
+    <string name="splash_error">تحقق من إعدادات التطبيق أو ليس لديها جهاز اتصال بالإنترنت</string>
+    <string name="set_wallpaper">وضع كخلفية</string>
+    <string name="download_wallpaper">تحميل</string>
+    <string name="msg_unknown_error">عذرا حدث خطا غير معروف</string>
+    <string name="msg_wall_fetch_error">آسف! غير قادر على جلب خلفية. تحقق من إعدادات التطبيق أو جهاز لايوجد اتصال بالإنترنت.</string>
+    <string name="toast_enter_valid_grid_columns">الرجاء ادخال عدد معقول </string>
+    <string name="toast_enter_gallery_name">الرجاء ادخال اسم الملف</string>
+    <string name="lbl_no_grid_columns">عدد الاعمدة</string>
+    <string name="lbl_gallery_name">  اسم ملف الصور</string>
+    <string name="lbl_btn_save">حفظ</string>
+
+    <string name="fab_menu_close">خروج</string>
+    <string name="fab_settings">الضبط</string>
+    <string name="fab_camera">الكاميرا</string>
+
+    <string name="categories_tab">الفئات</string>
+    <string name="colors_tab">الالوان</string>
+
+    <string name="permission">الرجاء تمكين أذونات</string>
+
+    <string name="copy">Copy</string>
+    <string name="visit_our_site">زورنا</string>
+    <string name="visit_our_fb_page">تفضل بزيارة صفحة الفيسبوك لدينا</string>
+    <string name="Subscribe_our_chanel">الاشتراك شانيل لدينا</string>
+
+    <string name="ad1_unit_id_MainActivity">ca-app-pub-9556270719341003/6787411979</string>
+    <string name="ad1_unit_id_SettingsActivity">ca-app-pub-9556270719341003/2577538377</string>
+    <string name="ad1_unit_id_WallpapersOfAlbums">ca-app-pub-9556270719341003/5531004773</string>
+    <string name="ad1_unit_id_ColoursSecondary">ca-app-pub-9556270719341003/9123599572</string>
+
+</resources>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "590974574077",
+    "firebase_url": "https://wallpapers-hd-c5970.firebaseio.com",
+    "project_id": "wallpapers-hd-c5970",
+    "storage_bucket": "wallpapers-hd-c5970.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:590974574077:android:764a5701d87faaab",
+        "android_client_info": {
+          "package_name": "com.gmonetix.wallpapershdultimate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "590974574077-jklc721l8bfvtchg2e3g4uc0sub42cau.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyOvb5FDtl1ppyTqtRbV2hNrNizILsZig"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

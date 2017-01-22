@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/visit_our_site"
+        android:title="@string/visit_our_site"
+        app:showAsAction="never"
+    />
+
+    <item
+        android:id="@+id/like_our_fb_page"
+        android:title="@string/visit_our_fb_page"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/subscribe_our_chanel"
+        android:title="@string/Subscribe_our_chanel"
+        app:showAsAction="never"
+        />
+</menu>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_color_palette"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ColorPaletteActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <include
+            layout="@layout/toolbar"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/imgFullscreen_color"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab_download_color"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_download"
+        fab:fab_size="normal"
+        fab:fab_colorNormal="@color/colorPrimary"
+        fab:fab_colorPressed="@color/colorPrimaryDark"
+        fab:fab_colorRipple="@color/colorAccent"
+        app:fab_showShadow="true"
+        app:fab_shadowColor="#000000"
+        app:fab_shadowRadius="20dp"
+        app:fab_shadowXOffset="1dp"
+        app:fab_shadowYOffset="3dp"/>
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab_set_as_wallpaper_color"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_set_as_wallpaper"
+        fab:fab_size="normal"
+        fab:fab_colorNormal="@color/colorPrimary"
+        fab:fab_colorPressed="@color/colorPrimaryDark"
+        fab:fab_colorRipple="@color/colorAccent"
+        app:fab_showShadow="true"
+        app:fab_shadowColor="#000000"
+        app:fab_shadowRadius="20dp"
+        app:fab_shadowXOffset="1dp"
+        app:fab_shadowYOffset="3dp"/>
+
+</RelativeLayout>

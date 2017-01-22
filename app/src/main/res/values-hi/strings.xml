@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">वॉलपेपर एच.डी. अंतिम</string>
+
+    <string name="title_activity_welcome">होम स्क्रीन</string>
+    <string name="next">अगले</string>
+    <string name="skip">छोड़ें</string>
+    <string name="start">समझ में आया</string>
+
+    <string name="slide_1_title">वॉलपेपर दैनिक अद्यतन प्राप्त!</string>
+    <string name="slide_1_desc">सुबह के साथ नई अद्यतन वॉलपेपर समय</string>
+
+    <string name="slide_2_title">सामग्री डिज़ाइन!</string>
+    <string name="slide_2_desc">सबसे अच्छा रंग पैलेट के साथ पूरी तरह से सामग्री डिजाइन</string>
+
+    <string name="slide_3_title">विशाल श्रेणियाँ!</string>
+    <string name="slide_3_desc">हर वॉलपेपर के चैनल एच.डी. में उपलब्ध</string>
+
+    <string name="slide_4_title">शेयर, डाउनलोड और अधिक मत!</string>
+    <string name="slide_4_desc">शेयर, डाउनलोड, वॉलपेपर के रूप में सेट और अधिक कर</string>
+
+    <string name="play_again_desc">स्लाइडर फिर से देखने के लिए , इस पर चलें Settings -> apps -> wallpapers hd -> clear data</string>
+    <string name="play_again">फिर से चालू करें</string>
+
+
+    <string name="action_settings">पतिस्थिति</string>
+    <string name="action_camera">कैमरा</string>
+
+    <string name="toast_saved">वॉलपेपर को बचाया #</string>
+    <string name="toast_saved_failed">माफ कीजिए! वॉलपेपर को बचाने में विफल</string>
+    <string name="toast_wallpaper_set">वॉलपेपर अद्यतन!</string>
+    <string name="toast_wallpaper_set_failed">माफ कीजिए! वॉलपेपर सेट करने में असमर्थ</string>
+    <string name="splash_error">वॉलपेपर डाउनलोड करने में असमर्थ. एप्लिकेशन सेटिंग्स की जाँच करें या डिवाइस इंटरनेट कनेक्शन नहीं है!</string>
+    <string name="set_wallpaper">लगाना</string>
+    <string name="download_wallpaper">डाउनलोड</string>
+    <string name="msg_unknown_error">माफ कीजिए! अज्ञात त्रुटि हुई.</string>
+    <string name="msg_wall_fetch_error">माफ कीजिए! वॉलपेपर प्राप्त करने में असमर्थ. एप्लिकेशन सेटिंग्स की जाँच करें या डिवाइस इंटरनेट कनेक्शन नहीं है.</string>
+    <string name="toast_enter_valid_grid_columns">स्तंभों की वैध संख्या दर्ज करें</string>
+    <string name="toast_enter_gallery_name">गैलरी निर्देशिका नाम दर्ज करें</string>
+    <string name="lbl_no_grid_columns">ग्रिड स्तंभों की संख्या</string>
+    <string name="lbl_gallery_name">गैलरी निर्देशिका का नाम</string>
+    <string name="lbl_btn_save">बचाना</string>
+
+    <string name="fab_menu_close">बंद करो</string>
+    <string name="fab_settings">पतिस्थिति</string>
+    <string name="fab_camera">कैमरा</string>
+
+    <string name="categories_tab">श्रेणी</string>
+    <string name="colors_tab">रंग</string>
+
+    <string name="permission">अनुमतियों को सक्षम करें</string>
+
+    <string name="copy">Copy</string>
+    <string name="visit_our_site">हमें यात्रा करें</string>
+    <string name="visit_our_fb_page">हमारे फेसबुक पेज पर जाएं</string>
+    <string name="Subscribe_our_chanel">हमारे चैनल सदस्यता लें</string>
+
+    <string name="ad1_unit_id_MainActivity">ca-app-pub-9556270719341003/6787411979</string>
+    <string name="ad1_unit_id_SettingsActivity">ca-app-pub-9556270719341003/2577538377</string>
+    <string name="ad1_unit_id_WallpapersOfAlbums">ca-app-pub-9556270719341003/5531004773</string>
+    <string name="ad1_unit_id_ColoursSecondary">ca-app-pub-9556270719341003/9123599572</string>
+
+</resources>
