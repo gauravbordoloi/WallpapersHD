@@ -5,11 +5,21 @@
     android:orientation="vertical"
     android:id="@+id/activity_splash"
     android:background="@color/black">
+
+    <ImageView
+        android:layout_above="@+id/tvWallpapersHD"
+        android:layout_margin="20dp"
+        android:background="@drawable/ic_launcher"
+        android:layout_centerHorizontal="true"
+        android:layout_width="200dp"
+        android:layout_height="200dp" />
+
     <TextView
         android:id="@+id/tvWallpapersHD"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
         android:text="Wallpapers HD"
         android:textSize="40sp"
-        android:layout_above="@+id/tvULTIMATE"
         android:textColor="@color/white"
         android:gravity="center"
         android:layout_width="match_parent"
@@ -21,8 +31,8 @@
         android:textSize="40sp"
         android:paddingTop="10dp"
         android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tvWallpapersHD"
         android:gravity="center"
-        android:layout_centerVertical="true"
         android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

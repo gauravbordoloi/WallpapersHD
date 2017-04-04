@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
     android:orientation="vertical">
 
     <android.support.design.widget.AppBarLayout
@@ -58,13 +60,31 @@
             android:id="@+id/btnSave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/btn_rounded_corner"
+            android:background="@drawable/btn"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
             android:text="@string/lbl_btn_save"
             android:textColor="@color/white"
             android:textSize="18dp" />
     </LinearLayout>
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab_settings_info"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/adViewSettingsActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_info"
+        fab:fab_size="normal"
+        fab:fab_label="@string/fab_camera"
+        fab:fab_colorNormal="@color/colorPrimary"
+        fab:fab_colorPressed="@color/colorPrimaryDark"
+        fab:fab_colorRipple="@color/colorAccent"
+        app:fab_shadowColor="#000000"
+        app:fab_shadowRadius="20dp"
+        app:fab_shadowXOffset="1dp"
+        app:fab_shadowYOffset="3dp"/>
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adViewSettingsActivity"

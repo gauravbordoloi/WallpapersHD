@@ -62,4 +62,8 @@
     <string name="ad1_unit_id_WallpapersOfAlbums">ca-app-pub-9556270719341003/5531004773</string>
     <string name="ad1_unit_id_ColoursSecondary">ca-app-pub-9556270719341003/9123599572</string>
 
+    <!-- Settintgs Info -->
+    <string name="info">معلومات</string>
+    <string name="info_message">"Made by Gmonetix\n\nIt's an open source project initiated by Gmonetix and present in github.\n\nLibraries used - \n\t1. Volley\n\t2. Gson\n\t3. FAB (com.github.clans:fab:1.6.4)\n\t4. Firebase\n\nThis app uses google photo's API to get the albums and images."</string>
+
 </resources>

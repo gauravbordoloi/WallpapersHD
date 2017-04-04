@@ -52,22 +52,6 @@ public class PrefManager {
     }
 
     /**
-     * Storing google username
-     * */
-    public void setGoogleUsername(String googleUsername) {
-        editor = pref.edit();
-
-        editor.putString(KEY_GOOGLE_USERNAME, googleUsername);
-
-        // commit changes
-        editor.commit();
-    }
-
-    public String getGoogleUserName() {
-        return pref.getString(KEY_GOOGLE_USERNAME, AppConst.PICASA_USER);
-    }
-
-    /**
      * store number of grid columns
      * */
     public void setNoOfGridColumns(int columns) {

@@ -102,12 +102,12 @@ public class WallpapersOfAlbums extends AppCompatActivity {
         if (selectedAlbumId == null) {
             // Recently added album url
             url = AppConst.URL_ALBUM_PHOTOS.replace("_PICASA_USER_",
-                    pref.getGoogleUserName()).replace("_ALBUM_ID_",
+                    AppConst.PICASA_USER).replace("_ALBUM_ID_",
                     "6363441302732923313");
         } else {
             // Selected an album, replace the Album Id in the url
             url = AppConst.URL_ALBUM_PHOTOS.replace("_PICASA_USER_",
-                    pref.getGoogleUserName()).replace("_ALBUM_ID_",
+                    AppConst.PICASA_USER).replace("_ALBUM_ID_",
                     selectedAlbumId);
         }
 

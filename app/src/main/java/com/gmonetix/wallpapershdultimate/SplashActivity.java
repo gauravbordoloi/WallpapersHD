@@ -44,8 +44,7 @@ public class SplashActivity extends Activity {
 
         // Picasa request to get list of albums
         String url = AppConst.URL_PICASA_ALBUMS
-                .replace("_PICASA_USER_", AppController.getInstance()
-                        .getPrefManger().getGoogleUserName());
+                .replace("_PICASA_USER_", AppConst.PICASA_USER);
 
         Log.d(TAG, "Albums request url: " + url);
 
@@ -93,7 +92,7 @@ public class SplashActivity extends Activity {
                     Intent intent = new Intent(getApplicationContext(),
                             PermissionTransferToMainActivity.class);
                     startActivity(intent);
-                    // closing spalsh activity
+                    // closing splash activity
                     finish();
 
                 } catch (JSONException e) {

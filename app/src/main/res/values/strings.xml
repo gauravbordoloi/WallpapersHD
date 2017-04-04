@@ -21,8 +21,8 @@
     <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> wallpapers hd -> clear data</string>
     <string name="play_again">Play Again</string>
 
-    <string name="action_settings">الضبط</string>
-    <string name="action_camera">كاميرا</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_camera">Camera</string>
 
     <string name="toast_saved">Wallpaper saved to #</string>
     <string name="toast_saved_failed">Sorry! Failed to save wallpaper</string>
@@ -57,4 +57,9 @@
     <string name="ad1_unit_id_SettingsActivity">ca-app-pub-9556270719341003/2577538377</string>
     <string name="ad1_unit_id_WallpapersOfAlbums">ca-app-pub-9556270719341003/5531004773</string>
     <string name="ad1_unit_id_ColoursSecondary">ca-app-pub-9556270719341003/9123599572</string>
+
+    <!-- Settintgs Info -->
+    <string name="info">Info</string>
+    <string name="info_message">"Made by Gmonetix\n\nIt's an open source project initiated by Gmonetix and present in github.\n\nLibraries used - \n\t1. Volley\n\t2. Gson\n\t3. FAB (com.github.clans:fab:1.6.4)\n\t4. Firebase\n\nThis app uses google photo's API to get the albums and images."</string>
+
 </resources>

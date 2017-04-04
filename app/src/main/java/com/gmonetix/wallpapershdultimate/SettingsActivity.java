@@ -1,13 +1,18 @@
 package com.gmonetix.wallpapershdultimate;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.github.clans.fab.FloatingActionButton;
 import com.gmonetix.wallpapershdultimate.helper.Font;
 import com.gmonetix.wallpapershdultimate.util.PrefManager;
 import com.google.android.gms.ads.AdRequest;
@@ -20,6 +25,7 @@ public class SettingsActivity extends AppCompatActivity {
     private Button btnSave;
     private Toolbar toolbar;
     private AdView adView;
+    private FloatingActionButton info;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +42,12 @@ public class SettingsActivity extends AppCompatActivity {
 
         Font font = new Font();
         TextView toolBarTextView = (TextView) findViewById(R.id.toolbarTextView);
-        toolBarTextView.setText(getResources().getString(R.string.fab_camera));
+        toolBarTextView.setText(getResources().getString(R.string.action_settings));
         font.setFont(getApplicationContext(),toolBarTextView);
 
         txtNoOfGridColumns = (TextView) findViewById(R.id.txtNoOfColumns);
         txtGalleryName = (TextView) findViewById(R.id.txtGalleryName);
+        info = (FloatingActionButton) findViewById(R.id.fab_settings_info);
 
         font.setFont(getApplicationContext(),txtGalleryName);
         font.setFont(getApplicationContext(),txtNoOfGridColumns);
@@ -55,6 +62,30 @@ public class SettingsActivity extends AppCompatActivity {
 
         // Gallery name
         txtGalleryName.setText(pref.getGalleryName());
+
+        info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(SettingsActivity.this,R.style.DialogTheme);
+                builder.setIcon(R.drawable.ic_launcher);
+                builder.setTitle(R.string.info);
+                builder.setMessage(R.string.info_message);
+                builder.setNegativeButton("View Source code", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.github.com/gmonetix")));
+                        dialog.dismiss();
+                    }
+                });
+                builder.setPositiveButton("Close", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                builder.show();
+            }
+        });
 
         // Save settings button click listener
         btnSave.setOnClickListener(new View.OnClickListener() {

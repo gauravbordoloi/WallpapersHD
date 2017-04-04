@@ -200,7 +200,7 @@ public class FullScreenViewActivity extends Activity implements OnClickListener 
     }
 
     /**
-     * Adjusting the image aspect ration to scroll horizontally, Image height
+     * Adjusting the image aspect ratio to scroll horizontally, Image height
      * will be screen height, width will be calculated respected to height
      * */
     @SuppressWarnings("deprecation")
