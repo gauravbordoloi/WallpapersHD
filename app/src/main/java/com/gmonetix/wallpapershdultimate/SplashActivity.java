@@ -4,8 +4,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.android.volley.Request.Method;
@@ -23,6 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SplashActivity extends Activity {
+    private ProgressBar progressBar;
     private static final String TAG = SplashActivity.class.getSimpleName();
     private static final String TAG_FEED = "feed", TAG_ENTRY = "entry",
             TAG_GPHOTO_ID = "gphoto$id", TAG_T = "$t",
@@ -37,6 +40,8 @@ public class SplashActivity extends Activity {
         TextView WallPapersHD = (TextView) findViewById(R.id.tvWallpapersHD);
         TextView ULTIMATE = (TextView) findViewById(R.id.tvULTIMATE);
         TextView Gmonetix = (TextView) findViewById(R.id.tvGMONETIX);
+        progressBar = (ProgressBar) findViewById(R.id.progressBarSplashScreen);
+        progressBar.setVisibility(View.VISIBLE);
         Font font = new Font();
         font.setFont(getApplicationContext(),WallPapersHD);
         font.setFont(getApplicationContext(),ULTIMATE);
@@ -87,7 +92,7 @@ public class SplashActivity extends Activity {
                     // Store albums in shared pref
                     AppController.getInstance().getPrefManger()
                             .storeCategories(albums);
-
+                    progressBar.setVisibility(View.GONE);
                     // String the main activity
                     Intent intent = new Intent(getApplicationContext(),
                             PermissionTransferToMainActivity.class);
@@ -97,6 +102,7 @@ public class SplashActivity extends Activity {
 
                 } catch (JSONException e) {
                     e.printStackTrace();
+                    progressBar.setVisibility(View.GONE);
                     Toast.makeText(getApplicationContext(),
                             getString(R.string.msg_unknown_error),
                             Toast.LENGTH_LONG).show();
@@ -120,12 +126,14 @@ public class SplashActivity extends Activity {
                         .getCategories() != null && AppController.getInstance().getPrefManger()
                         .getCategories().size() > 0) {
                     // String the main activity
+                    progressBar.setVisibility(View.GONE);
                     Intent intent = new Intent(getApplicationContext(),
                             PermissionTransferToMainActivity.class);
                     startActivity(intent);
-                    // closing spalsh activity
+                    // closing splash activity
                     finish();
                 } else {
+                    progressBar.setVisibility(View.GONE);
                     // Albums data not present in the shared preferences
                     Toast.makeText(getApplicationContext(),getResources().getString(R.string.msg_wall_fetch_error),Toast.LENGTH_LONG).show();
                 }

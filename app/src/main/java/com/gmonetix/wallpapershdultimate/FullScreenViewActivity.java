@@ -30,6 +30,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import uk.co.senab.photoview.PhotoViewAttacher;
+
 public class FullScreenViewActivity extends Activity implements OnClickListener {
     private static final String TAG = FullScreenViewActivity.class
             .getSimpleName();
@@ -154,7 +156,9 @@ public class FullScreenViewActivity extends Activity implements OnClickListener 
                                         fullImageView
                                                 .setImageBitmap(response
                                                         .getBitmap());
-                                        adjustImageAspect(width, height);
+                                        PhotoViewAttacher photoViewAttacher = new PhotoViewAttacher(fullImageView);
+                                        photoViewAttacher.update();
+                                       // adjustImageAspect(width, height);
 
                                         // hide loader and show set &
                                         // download buttons
@@ -203,7 +207,7 @@ public class FullScreenViewActivity extends Activity implements OnClickListener 
      * Adjusting the image aspect ratio to scroll horizontally, Image height
      * will be screen height, width will be calculated respected to height
      * */
-    @SuppressWarnings("deprecation")
+    /*@SuppressWarnings("deprecation")
     @SuppressLint("NewApi")
     private void adjustImageAspect(int bWidth, int bHeight) {
         LayoutParams params = new LayoutParams(
@@ -233,7 +237,7 @@ public class FullScreenViewActivity extends Activity implements OnClickListener 
                 + ", h = " + sHeight);
 
         fullImageView.setLayoutParams(params);
-    }
+    }*/
 
     @Override
     public void onClick(View v) {

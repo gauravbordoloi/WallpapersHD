@@ -11,8 +11,8 @@
         android:layout_margin="20dp"
         android:background="@drawable/ic_launcher"
         android:layout_centerHorizontal="true"
-        android:layout_width="200dp"
-        android:layout_height="200dp" />
+        android:layout_width="150dp"
+        android:layout_height="150dp" />
 
     <TextView
         android:id="@+id/tvWallpapersHD"
@@ -48,4 +48,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
+
+    <ProgressBar
+        android:layout_margin="16dp"
+        android:id="@+id/progressBarSplashScreen"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvULTIMATE"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

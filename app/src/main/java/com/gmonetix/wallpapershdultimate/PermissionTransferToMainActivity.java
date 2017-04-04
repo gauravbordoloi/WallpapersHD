@@ -19,7 +19,7 @@ public class PermissionTransferToMainActivity extends RuntimePermission {
 
     @Override
     public void onPermissionGranted(int requestCode) {
-        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+        startActivity(new Intent(PermissionTransferToMainActivity.this,MainActivity.class));
         finish();
     }
 }
