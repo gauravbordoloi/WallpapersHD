@@ -11,9 +11,7 @@ import android.util.Log;
 import android.view.Display;
 import android.view.WindowManager;
 import android.widget.Toast;
-
 import com.gmonetix.wallpapershdultimate.R;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.util.Random;
@@ -100,4 +98,5 @@ public class Utils {
                     Toast.LENGTH_SHORT).show();
         }
     }
+
 }

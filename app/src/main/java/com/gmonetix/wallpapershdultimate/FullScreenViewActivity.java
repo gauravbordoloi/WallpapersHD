@@ -1,18 +1,18 @@
 package com.gmonetix.wallpapershdultimate;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.Point;
 import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
-import android.view.Display;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
-import android.widget.LinearLayout.LayoutParams;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 import com.android.volley.Request.Method;
@@ -29,7 +29,7 @@ import com.gmonetix.wallpapershdultimate.util.Utils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
+import java.io.ByteArrayOutputStream;
 import uk.co.senab.photoview.PhotoViewAttacher;
 
 public class FullScreenViewActivity extends Activity implements OnClickListener {
@@ -47,6 +47,10 @@ public class FullScreenViewActivity extends Activity implements OnClickListener 
             TAG_MEDIA_GROUP = "media$group",
             TAG_MEDIA_CONTENT = "media$content", TAG_IMG_URL = "url",
             TAG_IMG_WIDTH = "width", TAG_IMG_HEIGHT = "height";
+
+    private Uri bitmapUri;
+    private final static int PIC_CROP = 99;
+    private  Bitmap bitmap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -241,17 +245,67 @@ public class FullScreenViewActivity extends Activity implements OnClickListener 
 
     @Override
     public void onClick(View v) {
-        Bitmap bitmap = ((BitmapDrawable) fullImageView.getDrawable())
+        bitmap = ((BitmapDrawable) fullImageView.getDrawable())
                 .getBitmap();
+        bitmapUri = getImageUri(this,bitmap);
+
         switch (v.getId()) {
             case R.id.fab_download:
                 utils.saveImageToSDCard(bitmap);
                 break;
             case R.id.fab_set_as_wallpaper:
-                utils.setAsWallpaper(bitmap);
+                performCrop(bitmapUri);
                 break;
             default:
                 break;
         }
     }
+
+    private void performCrop(Uri picUri){
+//        int width = getWindowManager().getDefaultDisplay().getWidth();
+//        int height = getWindowManager().getDefaultDisplay().getHeight();
+        try {
+            //call the standard crop action intent (the user device may not support it)
+            Intent cropIntent = new Intent("com.android.camera.action.CROP");
+            //indicate image type and Uri
+            cropIntent.setDataAndType(picUri, "image/*");
+            //set crop properties
+            cropIntent.putExtra("crop", "true");
+            //indicate aspect of desired crop
+            /*cropIntent.putExtra("aspectX", width);
+            cropIntent.putExtra("aspectY", height);*/
+            //indicate output X and Y
+            cropIntent.putExtra("outputX", 256);
+            cropIntent.putExtra("outputY", 256);
+            //retrieve data on return
+            cropIntent.putExtra("return-data", true);
+            //start the activity - we handle returning in onActivityResult
+            startActivityForResult(cropIntent, PIC_CROP);
+        }
+        catch(ActivityNotFoundException anfe){
+            //display an error message
+            String errorMessage = "Whoops - your device doesn't support the crop action!";
+            Toast toast = Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT);
+            toast.show();
+            utils.setAsWallpaper(bitmap);
+        }
+    }
+
+    public Uri getImageUri(Context inContext, Bitmap inImage) {
+        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+        inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+        String path = MediaStore.Images.Media.insertImage(inContext.getContentResolver(), inImage, "Title", null);
+        return Uri.parse(path);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == PIC_CROP && data != null) {
+            Bundle extras = data.getExtras();
+            Bitmap thePic = extras.getParcelable("data");
+            utils.setAsWallpaper(thePic);
+        }
+    }
+
 }
